@@ -1,4 +1,4 @@
-import DetailsPage from "./coucou";
+import DetailsPage from "./nftList";
 
 
 export const metadata = {

@@ -76,25 +76,11 @@ const Metamask = () => {
 
   const handleMetamask = async () => {
     if (MetaMaskOnboarding.isMetaMaskInstalled()) {
-      /* let account: [string] = window.ethereum._state.accounts;
-      if (!account.length) return window.ethereum.request({ method: 'eth_requestAccounts' }); */
-      //let token = await signMessageRequest(account[0])
       setAccount(false);
     } else {
       if (onboarding.current) onboarding.current.startOnboarding();
     }
   };
-
-/*   const setNewAccount = async (newAccount: [string]) => {
-    if (newAccount.length) {
-      let token = sessionStorage.getItem(newAccount[0]);
-      if (!token) token = await signMessageRequest(newAccount[0])
-      setAccount({ address: newAccount[0], token });
-    } else {
-      setAccount({ address: "", token: "" });
-      window.ethereum.removeListener('accountsChanged', setNewAccount);
-    }
-  } */
 
   return (
     <div className="text-right">

@@ -12,8 +12,7 @@ const NftRow = (props: { nft: NftType, index: number }) => {
     if (likedAddresses.length - 1 == index) return `${start}...${end}`;
     return `${start}...${end} | `
   })
-
-  //let customClass = props.index % 2 === 0 ? "" : "bg-slate-600";
+  
   return (
     <>
       <div className="grid grid-cols-1 p-2 items-center rounded-xl bg-slate-600">
